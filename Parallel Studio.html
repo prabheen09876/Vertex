@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>parallel® — 3D web & motion studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="loader" id="loader">
+  <div class="loader-top"><span>parallel® studio</span><span>Loading scene</span><span>Ed. 2026</span></div>
+  <div class="loader-count" id="loaderCount">0</div>
+  <div class="loader-bar" id="loaderBar"></div>
+</div>
+
+<canvas id="gl"></canvas>
+<div class="grain"></div>
+
+<div class="cursor" id="cursor"><div class="cursor-dot"></div><div class="cursor-ring"><span>Drag</span></div></div>
+
+<nav class="nav" id="nav">
+  <a href="#top" class="logo"><i></i>parallel®</a>
+  <div class="nav-links">
+    <a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+  </div>
+  <a href="#contact" class="btn magnetic">Start a project <span class="btn-arrow">→</span></a>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" data-screen-label="Hero" data-scene="hero">
+    <div class="hero-tags">
+      <span class="tag">Three.js / WebGL</span>
+      <span class="tag">GSAP motion</span>
+      <span class="tag">Blender modelling</span>
+    </div>
+    <div class="hero-coords">
+      <div>SCENE <b>01/07</b></div>
+      <div id="fps">60 FPS</div>
+      <div id="mouseXY">X 0.00 · Y 0.00</div>
+    </div>
+    <h1 class="hero-title">
+      <div class="row"><span class="line-mask"><span>Websites</span></span><span class="line-mask"><span class="accent">✦</span></span></div>
+      <div class="row"><span class="line-mask"><span>in <span class="serif-it">three</span></span></span></div>
+      <div class="row"><span class="line-mask"><span>dimensions.</span></span></div>
+    </h1>
+    <div class="hero-meta">
+      <p class="fade-up"><b>A web design & development studio</b> shipping fast, scroll-driven 3D websites, product renders and motion for brands that want to be remembered.</p>
+      <div class="scroll-ind fade-up"><span class="mouse"></span>Scroll to explore</div>
+      <div class="right fade-up"><a href="#work" class="btn ghost magnetic">See the work <span class="btn-arrow">↓</span></a></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" data-scene="marquee">
+    <div class="marquee-track" id="marquee">
+      <div class="marquee-item"><span>Web design</span><span class="star"></span><span class="o">3D scenes</span><span class="star"></span><span>Motion</span><span class="star"></span><span class="o">Product renders</span><span class="star"></span><span>Brand identity</span><span class="star"></span></div>
+      <div class="marquee-item"><span>Web design</span><span class="star"></span><span class="o">3D scenes</span><span class="star"></span><span>Motion</span><span class="star"></span><span class="o">Product renders</span><span class="star"></span><span>Brand identity</span><span class="star"></span></div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="intro" data-screen-label="Intro" data-scene="intro">
+    <div class="intro-side">
+      <div class="eyebrow">About the studio</div>
+      <div>
+        <div class="stat-num"><span class="count" data-to="6">0</span>–12</div>
+        <div class="stat-lbl">weeks from first call to launch, on a fixed price.</div>
+      </div>
+    </div>
+    <p class="intro-text" id="introText">We are a small studio of designers and engineers who model, animate and code the whole thing ourselves. Every scene is compressed to load fast on a phone, every word stays in the HTML so search engines read it, and every file is yours at handover.</p>
+  </section>
+
+  <!-- WORK (horizontal) -->
+  <section class="work" id="work" data-screen-label="Work" data-scene="work">
+    <div class="work-head">
+      <div>
+        <div class="eyebrow" style="margin-bottom:16px">Selected work · 2024—26</div>
+        <h2 class="h2" style="font-size:clamp(40px,5vw,84px)">Sites we've shipped</h2>
+      </div>
+      <div class="work-progress"><i id="workProg"></i></div>
+    </div>
+    <div class="work-track" id="workTrack">
+      <article class="work-card" data-cursor="view">
+        <div class="inner">
+          <div class="work-media c1"><div class="bg"></div><div class="big">Halo<br>Audio</div><span class="label">3D product configurator</span></div>
+          <div class="work-info"><h3>Halo Audio</h3><p>WebGL · Commerce</p></div>
+        </div>
+      </article>
+      <article class="work-card" data-cursor="view">
+        <div class="inner">
+          <div class="work-media c2"><div class="bg"></div><div class="big">Nocturne</div><span class="label">Scroll-driven story</span></div>
+          <div class="work-info"><h3>Nocturne Spirits</h3><p>Three.js · GSAP</p></div>
+        </div>
+      </article>
+      <article class="work-card" data-cursor="view">
+        <div class="inner">
+          <div class="work-media c3"><div class="bg"></div><div class="big">Atelier<br>Mono</div><span class="label">Multi-page brand site</span></div>
+          <div class="work-info"><h3>Atelier Mono</h3><p>Next.js · CMS</p></div>
+        </div>
+      </article>
+      <article class="work-card" data-cursor="view">
+        <div class="inner">
+          <div class="work-media c4"><div class="bg"></div><div class="big">Ember</div><span class="label">Launch microsite</span></div>
+          <div class="work-info"><h3>Ember Mobility</h3><p>Motion · 3D renders</p></div>
+        </div>
+      </article>
+      <article class="work-card" data-cursor="view">
+        <div class="inner">
+          <div class="work-media c5"><div class="bg"></div><div class="big">Verdant</div><span class="label">Shopify storefront</span></div>
+          <div class="work-info"><h3>Verdant Home</h3><p>Shopify · Identity</p></div>
+        </div>
+      </article>
+      <div class="work-end">
+        <h2 class="h2">Your project <span class="serif-it">could be</span> next.</h2>
+        <a href="#contact" class="btn magnetic" style="align-self:flex-start">Book an intro call <span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services" data-screen-label="Services" data-scene="services">
+    <div class="services-head">
+      <div>
+        <div class="eyebrow" style="margin-bottom:22px">What we do</div>
+        <h2 class="h2 split-lines">Five crafts,<br>one <span class="serif-it">team.</span></h2>
+      </div>
+      <p class="fade-up">Design, 3D and engineering under one roof, so the thing you approve in Figma is the thing that ships.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc"><div class="svc-fill"></div><div class="svc-row"><span class="n">01</span><div><h3>Web design & build</h3><div class="svc-tags"><span>Next.js</span><span>React</span><span>WordPress</span></div></div><p class="d">Custom multi-page sites designed in Figma and hand-coded for speed and SEO.</p><span class="ar">→</span></div></div>
+      <div class="svc"><div class="svc-fill"></div><div class="svc-row"><span class="n">02</span><div><h3>3D websites</h3><div class="svc-tags"><span>Three.js</span><span>WebGL</span><span>GSAP</span></div></div><p class="d">Product scenes visitors can turn, scroll-driven stories and configurators.</p><span class="ar">→</span></div></div>
+      <div class="svc"><div class="svc-fill"></div><div class="svc-row"><span class="n">03</span><div><h3>Product rendering</h3><div class="svc-tags"><span>Blender</span><span>Colourways</span></div></div><p class="d">Photoreal renders and turntables, modelled from your CAD or reference.</p><span class="ar">→</span></div></div>
+      <div class="svc"><div class="svc-fill"></div><div class="svc-row"><span class="n">04</span><div><h3>Motion graphics</h3><div class="svc-tags"><span>Kinetic type</span><span>Promo</span></div></div><p class="d">Launch films, UI animations and social cut-downs that move like the brand.</p><span class="ar">→</span></div></div>
+      <div class="svc"><div class="svc-fill"></div><div class="svc-row"><span class="n">05</span><div><h3>Brand identity</h3><div class="svc-tags"><span>Logo</span><span>Type</span><span>Guidelines</span></div></div><p class="d">Logo, type system, palette and the guidelines to keep it consistent.</p><span class="ar">→</span></div></div>
+    </div>
+  </section>
+
+  <!-- PARALLAX GALLERY -->
+  <section class="para" id="para" data-screen-label="Parallax" data-scene="para">
+    <div class="para-title"><h2 class="h2">Depth is<br>a <span class="serif-it">feeling.</span></h2></div>
+    <div class="para-item c1" data-speed="1.6" style="left:6%;top:18%;width:18vw;aspect-ratio:3/4"><div class="bg" style="position:absolute;inset:0"></div><span class="label">render · headphones</span></div>
+    <div class="para-item c2" data-speed="0.7" style="left:30%;top:58%;width:13vw;aspect-ratio:1"><div class="bg" style="position:absolute;inset:0"></div><span class="label">shader study</span></div>
+    <div class="para-item c4" data-speed="2.2" style="right:8%;top:12%;width:20vw;aspect-ratio:4/5"><div class="bg" style="position:absolute;inset:0"></div><span class="label">motion frame</span></div>
+    <div class="para-item c3" data-speed="1.1" style="right:28%;top:66%;width:15vw;aspect-ratio:4/3"><div class="bg" style="position:absolute;inset:0"></div><span class="label">identity · poster</span></div>
+    <div class="para-item c5" data-speed="0.4" style="left:52%;top:6%;width:10vw;aspect-ratio:1"><div class="bg" style="position:absolute;inset:0"></div><span class="label">colourway</span></div>
+    <div class="para-item c2" data-speed="1.9" style="left:2%;top:74%;width:12vw;aspect-ratio:3/4"><div class="bg" style="position:absolute;inset:0"></div><span class="label">turntable</span></div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process" data-screen-label="Process" data-scene="process">
+    <div class="process-head">
+      <div>
+        <div class="eyebrow" style="margin-bottom:22px">How a project runs</div>
+        <h2 class="h2 split-lines">Five steps,<br>no <span class="serif-it">surprises.</span></h2>
+      </div>
+      <p class="fade-up">Fixed scope, fixed price, a live staging link from week one, and a written update at the end of every day.</p>
+    </div>
+    <div class="stack">
+      <div class="step">
+        <div class="step-l"><div class="step-num">01</div><div><div class="weeks">Week 0</div><h3>Intro call</h3><p>What you're building, who it's for and what done looks like. You leave with a rough scope whether or not we work together.</p></div></div>
+        <div class="step-r"><div class="ui-card"><div class="bubble">What are you building?</div><div class="bubble me">A site for our US launch</div><div class="bubble">Let's scope it ✦</div></div></div>
+      </div>
+      <div class="step">
+        <div class="step-l"><div class="step-num">02</div><div><div class="weeks">Week 1</div><h3>Scope & proposal</h3><p>A fixed scope, a fixed price and a week-by-week plan, so nobody is surprised in week six.</p></div></div>
+        <div class="step-r"><div class="ui-card"><div class="row"><b>Proposal</b><span class="pill ok">Fixed price</span></div><div class="row"><span>Design</span><span class="pill">Wk 2–4</span></div><div class="row"><span>Build</span><span class="pill">Wk 4–8</span></div><div class="row"><span>Launch</span><span class="pill">Wk 9</span></div></div></div>
+      </div>
+      <div class="step">
+        <div class="step-l"><div class="step-num">03</div><div><div class="weeks">Weeks 2–4</div><h3>Design</h3><p>Direction first, then full layouts for desktop and mobile. Feedback lands on the frames, not in email threads.</p></div></div>
+        <div class="step-r"><div class="frames"><div style="height:240px" class="ph"></div><div style="height:240px;display:grid;grid-template-rows:1fr 1fr;gap:10px;border:0;background:none"><div class="ph"></div><div style="background:var(--accent);border:0"></div></div></div></div>
+      </div>
+      <div class="step">
+        <div class="step-l"><div class="step-num">04</div><div><div class="weeks">Weeks 4–8</div><h3>Build</h3><p>Development on a live staging link from the first week of build, so you review the real thing instead of screenshots.</p></div></div>
+        <div class="step-r"><div class="ui-card code"><div><span class="k">export default</span> <span>Page</span>()</div><div>&nbsp;&nbsp;<span class="k">return</span> &lt;<span class="s">Scene</span> /&gt;</div><div class="c">// staging deployed</div><div style="margin-top:10px"><span class="pill ok">● staging.live</span></div></div></div>
+      </div>
+      <div class="step">
+        <div class="step-l"><div class="step-num">05</div><div><div class="weeks">Week 9</div><h3>Launch & handover</h3><p>Go-live, redirects and analytics, then a recorded walkthrough and every file, login and repository in your name.</p></div></div>
+        <div class="step-r"><div class="ui-card"><div class="row"><span>Redirects</span><span class="pill ok">Done</span></div><div class="row"><span>Analytics</span><span class="pill ok">Done</span></div><div class="row"><span>Handover</span><span class="pill ok">Done</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing" data-screen-label="Pricing" data-scene="pricing">
+    <div class="pricing-head">
+      <div class="eyebrow">Pricing</div>
+      <h2 class="h2 split-lines">Clear prices,<br><span class="serif-it">fixed</span> scope.</h2>
+      <div class="toggle" id="curToggle"><span class="knob"></span><button class="on" data-cur="usd">International · USD</button><button data-cur="inr">India · INR</button></div>
+    </div>
+    <div class="plans">
+      <div class="plan tilt"><span class="glare"></span>
+        <div><h3>Professional</h3><p class="muted">A custom multi-page website for businesses that don't need 3D.</p></div>
+        <div class="price"><small>From</small><span class="amt" data-usd="$800" data-inr="₹50,000">$800</span></div>
+        <ul><li>Custom multi-page design & build</li><li>Speed optimisation</li><li>Technical SEO setup</li><li>Search Console & Analytics</li><li>Contact & lead forms</li></ul>
+        <a href="#contact" class="btn ghost">Start a project <span class="btn-arrow">→</span></a>
+      </div>
+      <div class="plan tilt feat"><span class="glare"></span><span class="badge">Most picked</span>
+        <div><h3>3D Website</h3><p class="muted">The full site with 3D built in — modelled, animated and fast on every device.</p></div>
+        <div class="price"><small>From</small><span class="amt" data-usd="$1,500" data-inr="₹70,000">$1,500</span></div>
+        <ul><li>Everything in Professional</li><li>Three.js / WebGL scenes</li><li>3D models made in Blender</li><li>GSAP scroll & motion</li><li>Search Console & Analytics</li></ul>
+        <a href="#contact" class="btn">Start a project <span class="btn-arrow">→</span></a>
+      </div>
+      <div class="plan tilt"><span class="glare"></span>
+        <div><h3>Custom</h3><p class="muted">Every other service, with a fixed quote after a free call.</p></div>
+        <div class="price"><small>Quoted on</small>Scope</div>
+        <ul><li>3D product renders</li><li>Motion graphics & video</li><li>Brand identity systems</li><li>Social media design</li><li>Poster & visual art</li></ul>
+        <a href="#contact" class="btn ghost">Get a quote <span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq" data-screen-label="FAQ" data-scene="faq">
+    <div class="faq-l"><div class="eyebrow" style="margin-bottom:22px">FAQ</div><h2 class="h2">Questions we hear <span class="serif-it">most.</span></h2></div>
+    <div class="faq-r">
+      <div class="qa"><button>How long does a website take?<span class="pm"></span></button><div class="ans"><p>A typical custom website takes 6 to 12 weeks from strategy to launch, depending on page count, whether it includes 3D, and how ready the content is. You get a detailed timeline in the proposal.</p></div></div>
+      <div class="qa"><button>Will a 3D site be slow on phones?<span class="pm"></span></button><div class="ans"><p>No. We model assets ourselves in Blender, compress geometry and textures, lazy-load scenes and fall back gracefully on low-power devices. All copy stays in the HTML, so search engines read it too.</p></div></div>
+      <div class="qa"><button>Do you work with international clients?<span class="pm"></span></button><div class="ans"><p>Yes — most of our work is remote. A shared Slack channel, fixed daily overlap hours and a board you can check anytime keep everyone in sync across time zones.</p></div></div>
+      <div class="qa"><button>Do you build on Shopify or WordPress?<span class="pm"></span></button><div class="ans"><p>Yes. Our default is custom Next.js and React, but we design and build bespoke Shopify storefronts and WordPress themes when they're the better fit.</p></div></div>
+      <div class="qa"><button>What do I own at the end?<span class="pm"></span></button><div class="ans"><p>Everything: design files, 3D source files, the code repository, logins and a recorded walkthrough — all in your name.</p></div></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact" data-screen-label="Contact" data-scene="cta">
+    <div class="eyebrow">Now booking · Q1 2027</div>
+    <h2 class="cta-big"><span class="line-mask"><span>Let's build</span></span><span class="line-mask"><span>in <span class="serif-it">depth.</span></span></span></h2>
+    <a href="mailto:hello@parallel.studio" class="cta-btn-big magnetic">Start a<br>project ↗</a>
+  </section>
+</main>
+
+<footer class="footer" data-screen-label="Footer">
+  <div class="foot-grid">
+    <div>
+      <h4>Studio time</h4>
+      <div class="clock-row"><span>New Delhi</span><b class="clock" data-tz="Asia/Kolkata">--:--</b></div>
+      <div class="clock-row"><span>London</span><b class="clock" data-tz="Europe/London">--:--</b></div>
+      <div class="clock-row"><span>New York</span><b class="clock" data-tz="America/New_York">--:--</b></div>
+    </div>
+    <div><h4>Sitemap</h4><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#pricing">Pricing</a></div>
+    <div><h4>Social</h4><a href="#">Instagram</a><a href="#">Behance</a><a href="#">LinkedIn</a><a href="#">Dribbble</a></div>
+    <div><h4>Contact</h4><a href="mailto:hello@parallel.studio">hello@parallel.studio</a><a href="#">Book a call</a></div>
+  </div>
+  <div class="foot-word" id="footWord"><span>p</span><span>a</span><span>r</span><span>a</span><span>l</span><span>l</span><span>e</span><span>l</span></div>
+  <div class="foot-bottom"><span>© 2026 parallel® studio</span><span>Made in three dimensions</span><a href="#top">Back to top ↑</a></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="scene.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
